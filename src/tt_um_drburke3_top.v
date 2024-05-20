@@ -29,7 +29,7 @@ magnitude_comparator(
 .LT_out    (uo_out[0]),  // A less than B
 .EQ_out    (uo_out[1]),  // A equal to B
 .GT_out    (uo_out[2]),  // A greater than B
-.B      (uio_in[7:0]),  // input B
+.B      (uio_in[7:0])  // input B
 );
 
 endmodule
