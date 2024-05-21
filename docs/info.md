@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-For neuron thereshold determination in digital approaches,
+For neuron thereshold evaluation in digital approaches,
 a fast magnitude determination is often necessary.  
 
 This component is based upon well-documented Clint Cole (Digilent) bit-sliced expandable, 
