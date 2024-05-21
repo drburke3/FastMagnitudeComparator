@@ -1,8 +1,3 @@
-/*
- * Copyright (c) 2024 Daniel Burke
- * SPDX-License-Identifier: Apache-2.0
- */
-
 `timescale 1ns / 1ps
 `define default_netname none
 
