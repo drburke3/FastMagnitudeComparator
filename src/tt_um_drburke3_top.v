@@ -24,7 +24,7 @@ module tt_um_drburke3_top (
   assign uo_out [7:3] = 0;
 
 
-magnitude_comparator my_mag_comp(
+magnitude_comparator my_mag_comp_8b(
 .A      (ui_in[7:0]),   // input A
 .LT_out    (uo_out[0]),  // A less than B
 .EQ_out    (uo_out[1]),  // A equal to B
