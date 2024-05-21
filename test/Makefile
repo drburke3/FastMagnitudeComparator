@@ -5,7 +5,7 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = tt_um_drburke3_top.v bitslice_comparator.v
+PROJECT_SOURCES = tt_um_drburke3_top.v comparator_bitslice.v
 
 ifneq ($(GATES),yes)
 
