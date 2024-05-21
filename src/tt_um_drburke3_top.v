@@ -28,31 +28,6 @@ magnitude_comparator my_mag_comp_8b(
 );
 
 endmodule
-//////////////////////////////////////////////////////////////////////////////////
-// Company: Berkeley Neuromorphic
-// Engineer:  Daniel Burke
-// 
-// Create Date: 05/13/2024 11:39:15 AM
-// Design Name: 
-// Module Name: magnitude_comparator_8b_AIG
-// Project Name: FastMagnitudeComparator
-// Target Devices: 
-// Tool Versions: 
-// Description: 	For neuron thereshold determination in digital approaches,
-//		a fast magnitude determination is often made.  This component
-//		is based upon well-documented Clint Cole (Digilent) bit-sliced expandable, 
-//		structural code re-expressed in AND-INV format to target optimized
-//		ABC9 AIG graph synthesis in OpenLane.  It is intentionally unclocked for measurements.
-//		https://www.realdigital.org/doc/a39d855f71772426c968c0151112b476
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module magnitude_comparator(
     input [7:0] A,
