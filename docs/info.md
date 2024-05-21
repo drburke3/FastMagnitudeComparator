@@ -9,12 +9,31 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+For neuron thereshold determination in digital approaches,
+a fast magnitude determination is often necessary.  
+
+This component is based upon well-documented Clint Cole (Digilent) bit-sliced expandable, 
+structural code re-expressed in AND-INV format to target optimized
+ABC9 AIG graph synthesis in OpenLane. 
+https://www.realdigital.org/doc/a39d855f71772426c968c0151112b476
+
+It is intentionally unclocked for measurements, and can be easily modified for a windowing-comparator 
+for inference field requirements.
+
+The fast magnitude comparitor is second of a series of common, scaleable library of elements
+intended to support CMOS digital neuron biomemetic building blocks, the first being a
+scaleable fast accumulator for vector evaluation and integration based upon a generated
+Sklansky adder/subtractor.
+
+Each component is intended to be fashioned in structural Verilog for future optimization, scale well
+so as to support varying bit-width large vector resolutions, and whenever possible described in
+AND-INV form to leverage the OpenLane ABC9 logic optimizer which uses AIG graphs.
 
 ## How to test
 
-Explain how to use your project
+The user will supply two numbers of appropriate length (A, B, 8 bits in this case) and receive back signals
+indicating "A less than B", "A equal to B", or "A greater than B" as LT_out, EQ_out, and GT_out respectively.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Means to supply appropiate with words (in this instance one 8b byte) and read back GT, EQ, LT signals.
