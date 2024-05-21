@@ -18,7 +18,6 @@ module tt_um_drburke3_top (
   assign uio_oe  = 0;
   assign uo_out [7:3] = 0;
 
-
 magnitude_comparator my_mag_comp_8b(
 .A      (ui_in[7:0]),   // input A
 .LT_out    (uo_out[0]),  // A less than B
