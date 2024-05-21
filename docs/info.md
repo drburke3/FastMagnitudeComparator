@@ -17,7 +17,7 @@ structural code re-expressed in AND-INV format to target optimized
 ABC9 AIG graph synthesis in OpenLane. 
 https://www.realdigital.org/doc/a39d855f71772426c968c0151112b476
 
-It is intentionally unclocked for measurements, and can be easily modified for a windowing-comparator 
+It is intentionally unclocked for measurements, and can be easily modified as a windowing-comparator 
 for inference field requirements.
 
 The fast magnitude comparitor is second of a series of common, scaleable library of elements
