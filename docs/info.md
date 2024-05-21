@@ -31,7 +31,7 @@ AND-INV form to leverage the OpenLane ABC9 logic optimizer which uses AIG graphs
 
 ## How to test
 
-The user will supply two numbers of appropriate length (A, B, 8 bits in this case) and receive back signals
+The user will supply two numbers of appropriate length (A, B, each 8 bits in this case) and receive back signals
 indicating "A less than B", "A equal to B", or "A greater than B" as LT_out, EQ_out, and GT_out respectively.
 
 ## External hardware
