@@ -11,9 +11,9 @@ You can also include images in this folder and reference them in the markdown. E
 
 Digital neuron thereshold evaluator manifested as a fast magnitude comparator.  
 
-This component is based upon well-documented Clint Cole (Digilent) bit-sliced expandable structural code. 
-https://www.realdigital.org/doc/a39d855f71772426c968c0151112b476
-The bitslice module has been modified from naive Verilog to AND-INV format to target optimized ABC9 AIG graph synthesis in OpenLane2.
+This component is based upon well-documented Clint Cole (Digilent) bit-sliced expandable structural code 
+(https://www.realdigital.org/doc/a39d855f71772426c968c0151112b476).
+ The bitslice module has been modified from naive Verilog to AND-INV format to target optimized ABC9 AIG graph synthesis in OpenLane2.
 
 This implementation is intentionally unclocked for measurements, and can be easily modified as a windowing-comparator 
 for inference field requirements.
