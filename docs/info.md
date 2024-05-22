@@ -16,7 +16,7 @@ This component is based upon well-documented Clint Cole (Digilent) bit-sliced ex
  The bitslice module has been modified from naive Verilog to AND-INV format to target optimized ABC9 AIG graph synthesis in OpenLane2.
 
 This implementation is intentionally unclocked for measurements, and can be easily modified as a windowing-comparator 
-for inference field requirements.
+for inference field requirements.  The primary purpose of this tapeout is to characterize the optimized gates in terms of propagation delay FO4 performance.
 
 The fast magnitude comparator is second of a series of common, scaleable library of elements
 intended to support CMOS digital neuron biomemetic building blocks, the first being a
