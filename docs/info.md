@@ -32,4 +32,4 @@ indicating "A less than B", "A equal to B", or "A greater than B" as LT_out, EQ_
 
 ## External hardware
 
-Means to supply appropiate width words (in this instance one 8b byte) and read back GT, EQ, LT signals.
+Means to supply appropiate width words (in this instance one 8b byte) and read back GT, EQ, LT signals which are continuously developed from the inputs.
