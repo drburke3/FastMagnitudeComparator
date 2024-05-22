@@ -10,7 +10,7 @@ For neuron thereshold evaluation in digital approaches, a fast magnitude determi
 
 This circuit takes two 8b quantities and outputs whether A is less than B, equal to B, or greater than B as rapidly as possible.
 
-The anticipated usage is to compare an incoming value to a pre-determined threshold (or range) locally, therefore is should compact and fast since it will be replicated many thousands of times.
+The anticipated usage is to compare an incoming value to a pre-determined threshold (or range) locally, therefore it should compact and fast since it will be replicated many thousands of times.
 
 This component is based upon well-documented Clint Cole (Digilent) bit-sliced expandable, structural code re-expressed in AND-INV format to target optimized ABC9 AIG graph synthesis in OpenLane. https://www.realdigital.org/doc/a39d855f71772426c968c0151112b476
 
