@@ -34,6 +34,8 @@ AND-INV form to leverage the OpenLane ABC9 logic optimizer which uses AIG graphs
 The user will supply two numbers of appropriate length (A, B, each 8 bits in this case) with returning signals
 indicating "A less than B", "A equal to B", or "A greater than B" as LT_out, EQ_out, and GT_out respectively.
 
+![IOs_2](https://github.com/drburke3/FastMagnitudeComparator/assets/782159/098e4a18-069b-4d23-bb30-56c7cb443706)
+
 ## External hardware
 
 Means to supply appropiate width words (in this instance one 8b byte) and read back GT, EQ, LT signals.
