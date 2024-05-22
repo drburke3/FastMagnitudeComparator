@@ -20,7 +20,7 @@ https://www.realdigital.org/doc/a39d855f71772426c968c0151112b476
 It is intentionally unclocked for measurements, and can be easily modified as a windowing-comparator 
 for inference field requirements.
 
-The fast magnitude comparitor is second of a series of common, scaleable library of elements
+The fast magnitude comparator is second of a series of common, scaleable library of elements
 intended to support CMOS digital neuron biomemetic building blocks, the first being a
 scaleable fast accumulator for vector evaluation and integration based upon a generated
 Sklansky adder/subtractor.
