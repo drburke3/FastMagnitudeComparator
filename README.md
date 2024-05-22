@@ -1,41 +1,28 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
 
-# Tiny Tapeout Verilog Project Template
+# Fast Magnitude Comparator
 
 - [Read the documentation for project](docs/info.md)
 
-## What is Tiny Tapeout?
+## Background Justification
 
-Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital and analog designs manufactured on a real chip.
+For neuron thereshold evaluation in digital approaches, a fast magnitude determination is often necessary.
 
-To learn more and get started, visit https://tinytapeout.com.
+This circuit takes two 8b quantities and outputs whether A is less than B, equal to B, or greater than B as rapidly as possible.
 
-## Set up your Verilog project
+The anticipated usage is to compare an incoming value to a pre-determined threshold (or range) locally, therefore is should compact and fast since it will be replicated many thousands of times.
 
-1. Add your Verilog files to the `src` folder.
-2. Edit the [info.yaml](info.yaml) and update information about your project, paying special attention to the `source_files` and `top_module` properties. If you are upgrading an existing Tiny Tapeout project, check out our [online info.yaml migration tool](https://tinytapeout.github.io/tt-yaml-upgrade-tool/).
-3. Edit [docs/info.md](docs/info.md) and add a description of your project.
-4. Adapt the testbench to your design. See [test/README.md](test/README.md) for more information.
+This component is based upon well-documented Clint Cole (Digilent) bit-sliced expandable, structural code re-expressed in AND-INV format to target optimized ABC9 AIG graph synthesis in OpenLane. https://www.realdigital.org/doc/a39d855f71772426c968c0151112b476
 
-The GitHub action will automatically build the ASIC files using [OpenLane](https://www.zerotoasiccourse.com/terminology/openlane/).
+## Implementation
 
-## Enable GitHub actions to build the results page
+Each component ideally should be:
+1.) Described in structural Verilog for future optimization, as opposed to behavioral.
+2.) Scale well so as to support varying bit-widths and high-dimensional vector resolutions.
+3.) Time-critical paths expressed in AND-INV form to leverage the OpenLane2 ABC9 logic optimizer which uses AIG graphs.
 
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
+This prototype circuit is intentionally unclocked for measurements, and can be easily modified as a windowing-comparator for inference field requirements.
 
-## Resources
+The fast magnitude comparitor is second of a series of common, scaleable library of elements intended to support CMOS digital neuron biomemetic building blocks, the first being a scaleable fast accumulator for vector evaluation and integration based upon a generated Sklansky adder/subtractor.
 
-- [FAQ](https://tinytapeout.com/faq/)
-- [Digital design lessons](https://tinytapeout.com/digital_design/)
-- [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
-- [Join the community](https://tinytapeout.com/discord)
-- [Build your design locally](https://docs.google.com/document/d/1aUUZ1jthRpg4QURIIyzlOaPWlmQzr-jBn3wZipVUPt4)
 
-## What next?
-
-- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
-- Edit [this README](README.md) and explain your design, how it works, and how to test it.
-- Share your project on your social network of choice:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@tinytapeout](https://twitter.com/tinytapeout)
