@@ -1,6 +1,12 @@
+/*
+ * Copyright (c) 2024 Daniel Burke
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 `timescale 1ns / 1ps
 `define default_netname none
 
+// Begin Tiny Tapeout wrapper interface
 module tt_um_drburke3_top (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
@@ -18,6 +24,8 @@ module tt_um_drburke3_top (
   assign uio_oe  = 0;
   assign uo_out [7:3] = 0;
 
+// Instantiate project
+    
 magnitude_comparator my_mag_comp_8b(
 .A      (ui_in[7:0]),   // input A
 .LT_out    (uo_out[0]),  // A less than B
@@ -27,7 +35,23 @@ magnitude_comparator my_mag_comp_8b(
 );
 
 endmodule
+// End Tiny Tapeout wrapper interface
 
+///////////////////////////////////////////////////////////////////////
+// Magnitude Comparator                                              //
+//                                                                   //
+// Designer: Clint Cole (Digilent)                                   //
+// https://www.realdigital.org/doc/a39d855f71772426c968c0151112b476  //
+//                                                                   //
+// This component is bit-sliced expandable, structural code          //
+// re-expressed in the AND-INV format to target optimized ABC9       //
+// AIG graph synthesis in OpenLane.                                  //
+//                                                                   //
+// The element is scaled by repeating the comparator_bitslice module // 
+// as needed taking the outputs from the proceeding bit as inputs    // 
+// as below.                                                         //
+//                                                                   //
+///////////////////////////////////////////////////////////////////////
 module magnitude_comparator(
     input [7:0] A,
     input [7:0] B,
