@@ -19,7 +19,7 @@ This component is based upon well-documented Clint Cole (Digilent) bit-sliced ex
 Each component ideally should be:
 1.) Described in structural Verilog for future optimization, as opposed to behavioral.
 2.) Scale well so as to support varying bit-widths and high-dimensional vector resolutions.
-3.) Time-critical paths expressed in AND-INV form to leverage the OpenLane2 ABC9 logic optimizer which uses AIG graphs.
+3.) Time-critical paths expressed in AND-INV form to leverage the OpenLane2 ABC9 logic optimizer which internally exploits AIG graphs.
 
 This prototype circuit is intentionally unclocked for measurements, and can be easily modified as a windowing-comparator for inference field requirements.
 
